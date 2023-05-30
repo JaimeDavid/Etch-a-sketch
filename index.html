@@ -11,24 +11,27 @@
         <div class="container">
             <div class="header">
                 <h1>Etch-a-sketch</h1>
+                <div class="mode">Mode: </div>
             </div>
             <div class="content">
                 <div id="buttons">
-                    <button id="black">Black</button>
-                    <button id="random">Random</button>
-                    <button id="white">Eraser</button>
+                    <button id="black" onclick="changeColor('black')">Black</button>
+                    <button id="random" onclick="changeColor('random')">Random</button>
+                    <button id="white" onclick="changeColor('')">Eraser</button>
                     <button id="reset">Clear</button>
-                    <input type="color" id="choice">
+                    <input type="text" class="grid-size" placeholder="Grid size"  value ="" onchange="changeSize(this.value)"/>
+                    <button class="set-size">Set size</button>
+                    <p id="message">Grid size must be a value between 2 and 99</p>
                 </div>
-                <div id="draw-area">
-
-                </div>
-                
-            </div>
-            <div class="footer"></div>
+                <div id="draw-area"></div>              
+            
+            
 
         </div>
-        
+        <div class="footer">
+           <p>2023 Jaime Andres David Angarita for The Odin Project</p> 
+        </div>
+    </div>
     <script src="script.js"></script>
     </body>
 </html>
